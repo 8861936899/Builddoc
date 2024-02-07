@@ -17,10 +17,11 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Build the Docker image
-      run: docker build --platform linux/amd64 -t yourdockerhubusername/yourrepositoryname:latest .
+      run: docker build --platform linux/amd64 -t rajatha123/python:latest .
 
     - name: Log in to Docker Hub
       run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push the Docker image to Docker Hub
+      
       run: docker push rajatha123/python:latest
